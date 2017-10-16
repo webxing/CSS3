@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3d</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			position: relative;
+		}
+		.stage{
+			position: relative;
+			width: 800px;
+			height: 400px;
+			margin: 200px auto;
+			transform-style: preserve-3d;
+			perspective: 2000px;
+		}
+		.control{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+			animation: rotate 40s linear infinite;
+
+		}
+		.imgWrap{
+			position: absolute;
+			width: 400px;
+			height: 400px;
+			left: 50%;
+			top:50%;
+			transform-style: preserve-3d;
+			transform: translate(-50%,-50%);
+		}
+		.img{
+			position: absolute;
+			font-size: 200px;
+			width: 400px;
+			height: 400px;
+			line-height: 400px;
+			text-align: center;
+			transform-style: preserve-3d;
+			transform-origin: 50% 50% 0px;
+		}
+		.img1{
+			background: rgba(38,26,13,0.1);
+			transform: rotateY(80deg) translateZ(482px);
+		}
+		.img2{
+			background: rgba(77,26,13,0.1);
+			transform: rotateY(125deg) translateZ(482px);
+		}
+		.img3{
+			background: rgba(22,55,1,0.1);
+			transform: rotateY(170deg) translateZ(482px);
+		}
+		.img4{
+			background: rgba(10,8,13,0.1);
+			transform: rotateY(215deg) translateZ(482px);
+		}
+		.img5{
+			background: rgba(99,26,13,0.1);
+			transform: rotateY(260deg) translateZ(482px);
+		}
+
+		.img6{
+			background: rgba(38,26,96,0.1);
+			transform: rotateY(305deg) translateZ(482px);
+		}
+		.img7{
+			background: rgba(38,32,13,0.1);
+			transform: rotateY(350deg) translateZ(482px);
+		}
+		.img8{
+			background: rgba(38,48,13,0.1);
+			transform: rotateY(395deg) translateZ(482px);
+		}
+		@keyframes rotate{
+			0%{
+				transform: translateZ(-1000px) rotateY(0deg) rotateZ(30deg);
+			}
+			50%{
+				transform: translateZ(-2000px) rotateY(-360deg) rotateZ(-30deg);
+			}
+			100%{
+			transform: translateZ(-1000px) rotateY(-720deg) rotateZ(30deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!--ÎèÌ¨Ôø-->
+		<div class="stage">
+			<!--¿ØÖÆ²ã-->
+			<div class="control">
+				<!--Í¼Æ¬Ôø-->
+				<div class="imgWrap">
+					<div class="img img1">1</div>
+					<div class="img img2">2</div>
+					<div class="img img3">3</div>
+					<div class="img img4">4</div>
+					<div class="img img5">5</div>
+					<div class="img img6">6</div>
+					<div class="img img7">7</div>
+					<div class="img img8">8</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
